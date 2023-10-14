@@ -1,4 +1,4 @@
-import styles from "./smartpones.module.scss";
+import styles from "./smartphones.module.scss";
 
 const Smartphones = () => {
   return (
