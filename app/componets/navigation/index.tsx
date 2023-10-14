@@ -12,6 +12,15 @@ const Navigation = () => {
         width="120"
         height="90"
       />
+      <div>
+        <label>
+          <input
+            className={styles.navInput}
+            type="text"
+            placeholder="What are You seraching?"
+          ></input>{" "}
+        </label>
+      </div>
       <ul className={styles["nav__ul"]}>
         <li className={styles["nav__ul--li"]}>
           <Link className={styles["nav__link"]} href="/">
@@ -45,6 +54,10 @@ const Navigation = () => {
           </Link>
         </li>
       </ul>
+      <button className={styles.navLoginButton}>Login</button>
+      <div className={styles.buttonContainer}>
+        <button className={styles.cartButton}>🛒</button>
+      </div>
     </nav>
   );
 };
