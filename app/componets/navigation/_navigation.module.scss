@@ -2,7 +2,7 @@
 
 .nav {
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 200px 1fr 2fr 300px 90px;
     justify-content: center;
     align-items: center;
     height: 70px;
@@ -15,12 +15,22 @@
     border-radius: 45px;
 }
 
+.navInput {
+    height: 40px;
+    width: 450px;
+    padding-left: 10px;
+    font-style: $primary-font-size;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
 .nav__ul {
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 30px;
 }
 
 .nav__ul--li {
@@ -32,4 +42,27 @@
     text-decoration-line: none;
     color: $link-primary-color;
     cursor: pointer;
+}
+
+.navLoginButton {
+    width: 130px;
+    border: 2px solid #000;
+    padding: 5px;
+    border-radius: 15px;
+    border: none;
+    font-size: $primary-font-size;
+}
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.cartButton {
+    background-color: transparent;
+    border: none;
+    font-size: $primary-headers-size;
 }
