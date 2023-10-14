@@ -5,13 +5,15 @@ import styles from "./_navigation.module.scss";
 const Navigation = () => {
   return (
     <nav className={styles.nav}>
-      <Image
-        className={styles["nav__logo"]}
-        src="/mainLogo.png"
-        alt="vegaIcon"
-        width="120"
-        height="90"
-      />
+      <Link href="/">
+        <Image
+          className={styles["nav__logo"]}
+          src="/mainLogo.png"
+          alt="vegaIcon"
+          width="120"
+          height="90"
+        />
+      </Link>
       <div>
         <label>
           <input
