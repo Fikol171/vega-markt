@@ -35,23 +35,23 @@ const Navigation = () => {
           </Link>
         </li>
         <li className={styles["nav__ul--li"]}>
-          <Link className={styles["nav__link"]} href="/">
+          <Link className={styles["nav__link"]} href="../../pages/laptops">
             Laptops
           </Link>
         </li>
 
         <li className={styles["nav__ul--li"]}>
-          <Link className={styles["nav__link"]} href="/">
+          <Link className={styles["nav__link"]} href="../../pages/groceries">
             Groceries
           </Link>
         </li>
         <li className={styles["nav__ul--li"]}>
-          <Link className={styles["nav__link"]} href="/">
+          <Link className={styles["nav__link"]} href="../../pages/fasion">
             Fasion
           </Link>
         </li>
         <li className={styles["nav__ul--li"]}>
-          <Link className={styles["nav__link"]} href="/">
+          <Link className={styles["nav__link"]} href="../../pages/health">
             Health
           </Link>
         </li>
