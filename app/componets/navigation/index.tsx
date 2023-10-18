@@ -5,7 +5,7 @@ import styles from "./_navigation.module.scss";
 import { useState } from "react";
 
 const Navigation = () => {
-  const [close, setClose] = useState(true);
+  const [close, setClose] = useState(false);
 
   const toggleNavigation = () => {
     setClose(!close);
