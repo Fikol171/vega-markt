@@ -5,7 +5,7 @@ import styles from "./_navigation.module.scss";
 import { useState } from "react";
 
 const Navigation = () => {
-  const [close, setClose] = useState(false);
+  const [close, setClose] = useState(true);
 
   const toggleNavigation = () => {
     setClose(!close);
@@ -114,7 +114,7 @@ const Navigation = () => {
             </Link>
           </li>
         </ul>
-        <div className="navButtons">
+        <div className={styles.navButtons}>
           <button className={styles.navLoginButton}>Login</button>
           <div className={styles.buttonContainer}>
             <button className={styles.cartButton}>🛒</button>

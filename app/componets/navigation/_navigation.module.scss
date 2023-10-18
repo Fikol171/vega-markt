@@ -5,24 +5,42 @@
     grid-template-columns: 200px 1fr 2fr 200px 90px;
     justify-content: center;
     align-items: center;
-    height: 70px;
+    min-height: 70px;
     background-color: #2d824b;
     padding: 5px;
+
+    @media (max-width: 450px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
 }
 
 .nav__logo {
     margin-left: 30px;
     border-radius: 45px;
+    @media (max-width: 450px) {
+        width: 160px;
+        height: 90px;
+        margin: 0;
+    }
 }
 
 .navInput {
     height: 40px;
     width: 450px;
     padding-left: 10px;
-    font-style: $primary-font-size;
+    font-size: $primary-font-size;
     border: none;
     border-radius: 15px;
     cursor: pointer;
+
+    @media (max-width: 450px) {
+        width: 150px;
+        font-size: $mobile-font-size;
+        width: 90vw;
+        margin: 0 15px 10px;
+    }
 }
 
 .nav__ul {
@@ -31,6 +49,45 @@
     justify-content: center;
     align-items: center;
     gap: 30px;
+
+    @media (max-width: 450px) {
+        gap: 10px;
+        padding: 50px 0;
+        flex-direction: column;
+        background-color: $green-primary-color;
+        width: 200px;
+        position: absolute;
+        top: 100px;
+        right: 0;
+    }
+}
+.nav__mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 450px) {
+        flex-direction: column;
+        background-color: $green-primary-color;
+        width: 200px;
+        position: absolute;
+        top: 10px;
+        left: -300px;
+    }
+}
+
+.navButton {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    z-index: 10;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    @media (min-width: 1024px) {
+        display: none;
+    }
 }
 
 .nav__ul--li {
@@ -42,6 +99,15 @@
     text-decoration-line: none;
     color: $link-primary-color;
     cursor: pointer;
+    @media (max-width: 450px) {
+        font-size: $mobile-font-size;
+    }
+}
+
+.navButtons {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
 }
 
 .navLoginButton {
@@ -50,7 +116,14 @@
     border-radius: 15px;
     border: none;
     font-size: $primary-font-size;
+
+    @media (max-width: 450px) {
+        font-size: $mobile-font-size;
+        width: 100px;
+        margin: 15px;
+    }
 }
+
 .buttonContainer {
     display: flex;
     justify-content: center;
