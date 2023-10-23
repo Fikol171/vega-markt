@@ -63,7 +63,7 @@ const Navigation = () => {
               onClick={() => {
                 setClose(!close);
               }}
-              href="../../Vega/pages/smartphones"
+              href="../../pages/smartphones"
             >
               Smartphones
             </Link>
@@ -74,7 +74,7 @@ const Navigation = () => {
               onClick={() => {
                 setClose(!close);
               }}
-              href="../../Vega/pages/laptops"
+              href="../../pages/laptops"
             >
               Laptops
             </Link>
@@ -86,7 +86,7 @@ const Navigation = () => {
               onClick={() => {
                 setClose(!close);
               }}
-              href="../../Vega/pages/groceries"
+              href="../../pages/groceries"
             >
               Groceries
             </Link>
@@ -97,7 +97,7 @@ const Navigation = () => {
               onClick={() => {
                 setClose(!close);
               }}
-              href="../../Vega/pages/fasion"
+              href="../../pages/fasion"
             >
               Fasion
             </Link>
@@ -108,7 +108,7 @@ const Navigation = () => {
               onClick={() => {
                 setClose(!close);
               }}
-              href="../../Vega/pages/health"
+              href="../../pages/health"
             >
               Health
             </Link>
