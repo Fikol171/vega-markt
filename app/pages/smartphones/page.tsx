@@ -25,15 +25,7 @@ const Smartphones = () => {
 
   return (
     <div>
-      <ul
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          listStyleType: "none",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+      <ul className="list">
         {data && data.products ? (
           data.products.map((product) => (
             <li
@@ -49,13 +41,7 @@ const Smartphones = () => {
               <p>Price:{product.price}-Euro</p>
               <p>Producent: {product.brand}</p>
               <h2>{product.description}</h2>
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "repeat(3, 1fr)",
-                  paddingBottom: "25px",
-                }}
-              >
+              <div className="imagesPosition">
                 {product.images.map((image) => (
                   <p key={product.title}>
                     <Image
