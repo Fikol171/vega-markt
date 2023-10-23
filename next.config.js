@@ -8,13 +8,6 @@ const nextConfig = {
   images: {
     domains: ["i.dummyjson.com"],
   },
-  basePath: "/Vega",
-  publicRuntimeConfig: {
-    basePath: "/Vega",
-  },
-  serverRuntimeConfig: {
-    basePath: "/Vega",
-  },
 };
 
 module.exports = nextConfig;
