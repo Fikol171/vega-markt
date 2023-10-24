@@ -5,6 +5,7 @@ interface Product {
   images: string[];
   price: number;
   brand: string;
+  category: string;
 }
 export default interface Data {
   products: Product[];
