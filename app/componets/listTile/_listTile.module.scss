@@ -9,6 +9,10 @@
     background-color: $white-primary-color;
     margin-bottom: 10px;
     border-radius: 15px;
+
+    @media (max-width: 767px) {
+        max-width: 100vw;
+    }
 }
 
 .productName {
