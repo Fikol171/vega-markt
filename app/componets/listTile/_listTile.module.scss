@@ -6,6 +6,9 @@
     max-width: 80vw;
     width: 100%;
     flex-wrap: wrap;
+    background-color: $white-primary-color;
+    margin-bottom: 10px;
+    border-radius: 15px;
 }
 
 .productName {
@@ -15,7 +18,7 @@
     font-size: 38px;
 
     @media (max-width: 767px) {
-        margin: 0;
+        text-align: center;
     }
 }
 
@@ -24,7 +27,7 @@
     margin: 10px 25px;
 
     @media (max-width: 767px) {
-        margin: 0;
+        text-align: center;
     }
 }
 
@@ -34,4 +37,8 @@
     font-weight: bold;
     font-size: 26px;
     margin: 10px 25px;
+
+    @media (max-width: 767px) {
+        margin: 10px auto;
+    }
 }

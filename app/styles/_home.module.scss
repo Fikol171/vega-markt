@@ -3,6 +3,7 @@
 .container {
     border: 2px solid #b5aeae;
     margin-bottom: 20px;
+    padding: 5px;
 }
 
 .list {
@@ -28,7 +29,7 @@
 
     @media (max-width: 1024px) {
         max-width: 80vw;
-        margin: 0;
+        margin: 0 auto;
     }
 }
 
@@ -41,6 +42,7 @@
     @media (max-width: 1180px) {
         grid-template-columns: repeat(2, 1fr);
         margin: 0;
+        justify-items: center;
     }
 
     @media (max-width: 767px) {
