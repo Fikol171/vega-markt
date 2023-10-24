@@ -30,7 +30,7 @@ const Navigation = () => {
             }}
           >
             <Image
-              src={close ? "/icon-burger.svg" : "/icon-close.svg"}
+              src={close ? "/icon-close.svg" : "/icon-burger.svg"}
               alt="button"
               width="18"
               height="15"
@@ -45,12 +45,12 @@ const Navigation = () => {
             ></input>{" "}
           </label>
         </div>
-        <ul className={close ? styles.navList : styles.navMobile}>
+        <ul className={close ? styles.navMobile : styles.navList}>
           <li className={styles.navItem}>
             <Link
               className={styles.navLink}
               onClick={() => {
-                setClose(true);
+                setClose(false);
               }}
               href="/"
             >
@@ -61,7 +61,7 @@ const Navigation = () => {
             <Link
               className={styles.navLink}
               onClick={() => {
-                setClose(true);
+                setClose(false);
               }}
               href="../../pages/smartphones"
             >
@@ -72,7 +72,7 @@ const Navigation = () => {
             <Link
               className={styles.navLink}
               onClick={() => {
-                setClose(true);
+                setClose(false);
               }}
               href="../../pages/laptops"
             >
@@ -84,7 +84,7 @@ const Navigation = () => {
             <Link
               className={styles.navLink}
               onClick={() => {
-                setClose(true);
+                setClose(false);
               }}
               href="../../pages/fragrances"
             >
@@ -95,7 +95,7 @@ const Navigation = () => {
             <Link
               className={styles.navLink}
               onClick={() => {
-                setClose(true);
+                setClose(false);
               }}
               href="../../pages/home-decoration"
             >
@@ -106,7 +106,7 @@ const Navigation = () => {
             <Link
               className={styles.navLink}
               onClick={() => {
-                setClose(true);
+                setClose(false);
               }}
               href="../../pages/skincare"
             >
