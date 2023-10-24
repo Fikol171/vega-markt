@@ -13,7 +13,7 @@ const Health = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const productsData = await getProducts("fragrances");
+        const productsData = await getProducts("skincare");
         setData(productsData);
       } catch (error) {
         console.error("Wystąpił błąd podczas pobierania danych:", error);
