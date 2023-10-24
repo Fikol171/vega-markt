@@ -2,14 +2,13 @@
 import styles from "./styles/_home.module.scss";
 import getProducts from "../getMainPage";
 import { useEffect, useState } from "react";
-import Image from "next/image";
-import { usePathname } from "next/navigation";
 import Data from "./componets/interfaces";
 import Link from "next/link";
+import ListTile from "./componets/listTile";
+import ImagesTile from "./componets/imagesTile";
 
 export default function Home() {
   const [data, setData] = useState<Data | null>(null);
-  const pathname = usePathname();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -30,47 +29,34 @@ export default function Home() {
         <ul className={styles.list}>
           {data && data.products ? (
             data.products.map((product) => (
-              <li key={product.id} className={styles.listItem}>
-                <h1 className={styles.productName}>{product.title}</h1>
-                <h2 className={styles.subHeader}>{product.description}</h2>
-                <p className={styles.productPrice}>
-                  Price: {product.price} -euro
-                </p>{" "}
-                <p className={styles.productDescription}>
-                  {" "}
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
-                  deserunt ut cumque cum autem rerum dolor debitis placeat
-                  commodi ducimus ea velit perspiciatis, corporis molestias
-                  dolore. Repellendus ipsa est esse, provident, ea autem
-                  recusandae et suscipit nesciunt cupiditate non explicabo
-                  placeat iste maiores quos eius dicta quam error adipisci,
-                  distinctio quidem consectetur! Voluptatibus nisi ab doloribus
-                  debitis. Adipisci, at optio! Possimus, rerum sit earum iure
-                  animi sequi quo odio sed ipsam vitae deserunt temporibus optio
-                  doloremque voluptate expedita ipsum culpa quibusdam delectus.
-                  Earum nisi animi, at consequatur porro a quos, qui veniam
-                  velit voluptatibus accusamus harum ad nulla nesciunt
-                  repellendus placeat, similique corporis fugiat possimus
-                  necessitatibus voluptas adipisci inventore quae? Eligendi
-                  doloribus quod nisi neque officiis ipsa reiciendis, sit
-                  consequatur?
-                </p>
-                <div className={styles.productImages}>
-                  {product.images.map((image) => (
-                    <p key={product.id}>
-                      <Link href={`./pages/${product.category}`}>
-                        <Image
-                          className={styles.imagesSize}
-                          src={image}
-                          alt={product.title}
-                          width="430"
-                          height="390"
-                        />
-                      </Link>
-                    </p>
-                  ))}
+              <>
+                <div className={styles.container}>
+                  <ListTile
+                    id={product.id}
+                    title={product.title}
+                    description={product.description}
+                    price={product.price}
+                  />
+                  <p className={styles.productDescription}>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Eveniet fuga laudantium est itaque natus, quaerat nihil!
+                    Beatae sit ullam commodi qui harum mollitia illo porro quas
+                    expedita provident architecto nulla magnam quae consequatur
+                    rem praesentium corrupti repellat, quod quis obcaecati
+                    distinctio voluptas magni? Eum accusamus illum
+                    necessitatibus eaque velit explicabo.
+                  </p>
+                  <div className={styles.productImages}>
+                    {product.images.map((image) => (
+                      <p key={product.id}>
+                        <Link href={`./pages/${product.category}`}>
+                          <ImagesTile image={image} title={product.title} />
+                        </Link>
+                      </p>
+                    ))}
+                  </div>
                 </div>
-              </li>
+              </>
             ))
           ) : (
             <li>Loading...</li>
