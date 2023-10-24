@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import styles from "./smartphones.module.scss";
+import styles from "./_smartphones.module.scss";
 import { usePathname } from "next/navigation";
 import getProducts from "@/getData";
 import Image from "next/image";
@@ -25,7 +25,7 @@ const Smartphones = () => {
 
   return (
     <div>
-      <ul className="list">
+      <ul className={styles.list}>
         {data && data.products ? (
           data.products.map((product) => (
             <li
@@ -37,19 +37,20 @@ const Smartphones = () => {
                 flexWrap: "wrap",
               }}
             >
-              <h1>{product.title}</h1>
-              <p>Price:{product.price}-Euro</p>
-              <p>Producent: {product.brand}</p>
-              <h2>{product.description}</h2>
-              <div className="imagesPosition">
+              <h1 className={styles.productName}>{product.title}</h1>
+              <p className={styles.productName}>Price:{product.price}-Euro</p>
+              <p className={styles.productName}>Producent: {product.brand}</p>
+              <h2 className={styles.productName}>{product.description}</h2>
+              <div className={styles.imagesPosition}>
                 {product.images.map((image) => (
-                  <p key={product.title}>
+                  <p key={product.id}>
                     <Image
+                      className={styles.images}
                       src={image}
                       alt={product.title}
                       width="300"
                       height="350"
-                      style={{ margin: "15px" }}
+                      // style={{ margin: "15px" }}
                     />
                   </p>
                 ))}

@@ -7,6 +7,7 @@
     justify-content: center;
     align-items: center;
     @media (max-width: 400px) {
+        align-items: flex-start;
     }
 }
 .imagesPosition {
@@ -14,8 +15,13 @@
     grid-template-columns: repeat(3, 1fr);
     padding-bottom: 25px;
     @media (max-width: 400px) {
-        .imagesPosition {
-            grid-template-columns: 340px;
-        }
+        grid-template-columns: 300px;
     }
+}
+
+.images {
+    max-width: 300px;
+}
+.productName {
+    width: 80vw;
 }
