@@ -15,11 +15,11 @@ const Navigation = () => {
       <nav className={styles.nav}>
         <Link href="/">
           <Image
-            className={styles["nav__logo"]}
-            src="/mainLogo.png"
+            className={styles.navLogo}
+            src="/logo.png"
             alt="vegaIcon"
-            width="120"
-            height="90"
+            width="100"
+            height="100"
           />
         </Link>
         <div>
@@ -30,7 +30,7 @@ const Navigation = () => {
             }}
           >
             <Image
-              src={close ? "/icon-close.svg" : "/icon-hamburger.svg"}
+              src={close ? "/icon-burger.svg" : "/icon-close.svg"}
               alt="button"
               width="18"
               height="15"
@@ -45,34 +45,34 @@ const Navigation = () => {
             ></input>{" "}
           </label>
         </div>
-        <ul className={close ? styles["nav__ul"] : styles["nav__mobile"]}>
-          <li className={styles["nav__ul--li"]}>
+        <ul className={close ? styles.navList : styles.navMobile}>
+          <li className={styles.navItem}>
             <Link
-              className={styles["nav__link"]}
+              className={styles.navLink}
               onClick={() => {
-                setClose(!close);
+                setClose(true);
               }}
               href="/"
             >
               Home
             </Link>
           </li>
-          <li className={styles["nav__ul--li"]}>
+          <li className={styles.navItem}>
             <Link
-              className={styles["nav__link"]}
+              className={styles.navLink}
               onClick={() => {
-                setClose(!close);
+                setClose(true);
               }}
               href="../../pages/smartphones"
             >
               Smartphones
             </Link>
           </li>
-          <li className={styles["nav__ul--li"]}>
+          <li className={styles.navItem}>
             <Link
-              className={styles["nav__link"]}
+              className={styles.navLink}
               onClick={() => {
-                setClose(!close);
+                setClose(true);
               }}
               href="../../pages/laptops"
             >
@@ -80,37 +80,37 @@ const Navigation = () => {
             </Link>
           </li>
 
-          <li className={styles["nav__ul--li"]}>
+          <li className={styles.navItem}>
             <Link
-              className={styles["nav__link"]}
+              className={styles.navLink}
               onClick={() => {
-                setClose(!close);
+                setClose(true);
               }}
-              href="../../pages/groceries"
+              href="../../pages/fragrances"
             >
-              Groceries
+              Fragrances
             </Link>
           </li>
-          <li className={styles["nav__ul--li"]}>
+          <li className={styles.navItem}>
             <Link
-              className={styles["nav__link"]}
+              className={styles.navLink}
               onClick={() => {
-                setClose(!close);
+                setClose(true);
               }}
-              href="../../pages/fasion"
+              href="../../pages/home-decoration"
             >
               Fasion
             </Link>
           </li>
-          <li className={styles["nav__ul--li"]}>
+          <li className={styles.navItem}>
             <Link
-              className={styles["nav__link"]}
+              className={styles.navLink}
               onClick={() => {
-                setClose(!close);
+                setClose(true);
               }}
-              href="../../pages/health"
+              href="../../pages/skincare"
             >
-              Health
+              Skincare
             </Link>
           </li>
         </ul>
