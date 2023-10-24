@@ -1,0 +1,37 @@
+@import "../../styles/utils/variables";
+
+.listItem {
+    display: flex;
+    flex-direction: column;
+    max-width: 80vw;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.productName {
+    color: $headers-primary-color;
+    margin: 10px 25px;
+    font-weight: 900;
+    font-size: 38px;
+
+    @media (max-width: 767px) {
+        margin: 0;
+    }
+}
+
+.subHeader {
+    color: $headers-primary-color;
+    margin: 10px 25px;
+
+    @media (max-width: 767px) {
+        margin: 0;
+    }
+}
+
+.productPrice {
+    color: $small-content-color;
+    line-height: 1.4;
+    font-weight: bold;
+    font-size: 26px;
+    margin: 10px 25px;
+}
